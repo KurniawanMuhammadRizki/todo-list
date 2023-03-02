@@ -17,7 +17,7 @@ class DatabaseService {
     }
   }
 
-  final   _todoReference = FirebaseFirestore.instance.collection('todos');
+  final _todoReference = FirebaseFirestore.instance.collection('todos');
   final _dataUserReference = FirebaseFirestore.instance.collection('users');
 
   List<Todo> _todoListFromSnapshot(QuerySnapshot snapshot) {
@@ -54,6 +54,7 @@ class DatabaseService {
       userImageUrl: data['user_image_url'] ?? '',
     );
   }
+  //test
 
   Stream<DataUser> get dataUser {
     return _dataUserReference.doc(_uid).snapshots().map(_dataUSerFromSnapshot);
