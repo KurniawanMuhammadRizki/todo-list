@@ -54,7 +54,6 @@ class DatabaseService {
       userImageUrl: data['user_image_url'] ?? '',
     );
   }
-  //test
 
   Stream<DataUser> get dataUser {
     return _dataUserReference.doc(_uid).snapshots().map(_dataUSerFromSnapshot);
